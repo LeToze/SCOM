@@ -1,0 +1,21 @@
+.centering2 {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+}
+.workingasintented{
+	
+    display: flex;
+    justify-content: center;
+}
+input[type=submit]:hover {
+  background-color: #aaaa;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left
+}
