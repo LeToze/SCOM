@@ -2,14 +2,24 @@
 #include <stdlib.h>
 
 int sum(int value){
-  int val=value;
-  int result=0;
-  while(val!=0){
-    result+=val;
-    val--;
+
+  int val_mid=0;
+  int first=0, second=1;
+  if (value == 0){
+    return first;
+  }
+  else{
+    
+  for ( int i = 1; i < value; i++)
+  {
+    val_mid= first + second;
+    first=second;
+    second=val_mid;
+  }
+  return second;
   }
 
-  return result;
+  
 }
 
 
@@ -22,9 +32,9 @@ int main () {
     printf("Content-type: text/plain\n");
     printf("Connection: close\n");
     printf("\n");
-    getchar();
-    getchar();
+    //getchar();
+    //getchar();
     scanf("%d", &c);
-    printf("Sum result: %d",sum(c));
+    printf("Hightest Fibonacci term: %d\n",sum(c));
     return 0;
 }
