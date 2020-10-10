@@ -3,7 +3,10 @@
 #include <sys/time.h>
 #include <sys/wait.h>
 #include <unistd.h>
-#include "math.h"
+#include <math.h>
+
+//AO COMPILAR INSERIR -lm
+
 
 int main() {
 
@@ -36,14 +39,16 @@ printf("\n");
 	average=sum/i;
 	
 	for(i=0;i<10;i++){
-		somatorio=(vec[i]-average)^2;
+		somatorio=(vec[i]-average)*(vec[i]-average);
 	}
 	
 	lambda=sqrt(somatorio/i);
 	
+	//for a 95% confidence interval, z alpha/2 is 1.96
+	
 	//falta calcular o intervalo de confianca
 	
-	printf("\naverage: %f", average*1E-6);
+	printf("\naverage: %f +/- Zalpha: %f", average*1E-6, (1.96*lambda)/sqrt(i)*1E-6);
 	
 
   return 0;
