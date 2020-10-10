@@ -46,8 +46,6 @@ printf("\n");
 	
 	//for a 95% confidence interval, z alpha/2 is 1.96
 	
-	//falta calcular o intervalo de confianca
-	
 	printf("\naverage: %f +/- Zalpha: %f", average*1E-6, (1.96*lambda)/sqrt(i)*1E-6);
 	
 
