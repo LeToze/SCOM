@@ -26,7 +26,7 @@ float timer_1;
 
 gettimeofday(&start, NULL);
 
-system("wget http://35.244.95.95:80/cgi-bin/test.cgi --post-data 'n=3' -q");
+system("wget http://35.244.95.95:80/cgi-bin/fibo.py --post-data 'n=3' -q");
 
 gettimeofday(&end, NULL);
   
