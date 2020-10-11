@@ -8,13 +8,22 @@
 //AO COMPILAR INSERIR -lm
 
 
-int main() {
+int main(int argc, char *argv[]) {
 
+if (argc < 2 ) {
+	printf("Put Number of samples to acess Website\n");
+	exit(1);
+}
 struct timeval start, end;
 float timer_1, sum=0, vec[100], average, somatorio, lambda;
 int i=0;
+int n =atoi(argv[1]);
 
-for(i=0;i<10;i++){
+if (n > 15){
+	printf(" Cant access the website more than 15 times so the acess number will be changed to 15.\n");
+	n=15;
+}
+for(i=0;i<n;i++){
 
 gettimeofday(&start, NULL);
 
@@ -33,7 +42,7 @@ printf("\n");
 
  printf("Time taken to access CGI with a POST send is : %f seconds\n\n",
     timer_1*1E-6);
-
+sleep(1);
 }
 
 	average=sum/i;
